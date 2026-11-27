@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>釜山 5 日自由行行程表｜12/10 - 12/14</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-page: #FAF7F2;
+      --bg-card: #FFFFFF;
+      --bg-oat: #F3EDE4;
+      --bg-sand: #EAE0D2;
+      --primary: #4A3B32;
+      --primary-hover: #362A23;
+      --accent: #B86B4B;
+      --accent-soft: #F9EFEA;
+      --olive: #6B705C;
+      --olive-soft: #EEF0EA;
+      --text-main: #3A322C;
+      --text-muted: #786C63;
+      --border: #E5DDD3;
+      --shadow: 0 4px 16px rgba(74, 59, 50, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 20px 16px 72px;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .sync-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--olive);
+      background: var(--olive-soft);
+      padding: 4px 12px;
+      border-radius: 999px;
+      border: 1px solid #D8DDD0;
+    }
+
+    .sync-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #65A30D;
+    }
+
+    .btn-print {
+      background: var(--bg-card);
+      color: var(--primary);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-print:hover {
+      background: var(--bg-oat);
+    }
+
+    header {
+      background: linear-gradient(135deg, #4A3B32 0%, #6D5647 100%);
+      color: #FAF7F2;
+      padding: 36px 32px;
+      border-radius: 18px;
+      box-shadow: 0 12px 28px rgba(74, 59, 50, 0.16);
+      margin-bottom: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: "BUSAN";
+      position: absolute;
+      right: -8px;
+      bottom: -22px;
+      font-size: 96px;
+      font-weight: 900;
+      color: rgba(250, 247, 242, 0.06);
+      letter-spacing: 4px;
+      pointer-events: none;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 0.8px;
+      margin-bottom: 10px;
+    }
+
+    header .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 14.5px;
+      color: #EAE0D2;
+    }
+
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+      background: rgba(250, 247, 242, 0.92);
+      backdrop-filter: blur(8px);
+      padding: 8px 0;
+    }
+
+    .quick-nav a {
+      text-decoration: none;
+      background: var(--bg-card);
+      color: var(--primary);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+
+    .quick-nav a:hover, .quick-nav a.nav-wish {
+      background: var(--primary);
+      color: #FAF7F2;
+      border-color: var(--primary);
+    }
+
+    .quick-nav a.nav-wish {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 26px 28px;
+      margin-bottom: 22px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .day-title {
+      font-size: 21px;
+      font-weight: 900;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .day-pill {
+      background: var(--primary);
+      color: #FAF7F2;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 3px 11px;
+      border-radius: 7px;
+      letter-spacing: 0.5px;
+    }
+
+    .firework-tag {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid #E8C7B8;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+
+    .focus-banner {
+      background: var(--bg-oat);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      padding: 12px 16px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .focus-label {
+      background: var(--accent);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 5px;
+      letter-spacing: 0.5px;
+    }
+
+    .focus-text {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--primary);
+    }
+
+    .prep-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .prep-box {
+      background: var(--bg-page);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .prep-box h3 {
+      font-size: 14px;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .pass-tag {
+      display: inline-block;
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 5px;
+      margin-top: 4px;
+    }
+
+    .pass-purple {
+      background: #EFE9F4;
+      color: #5E4378;
+    }
+
+    .pass-blue {
+      background: #E6EFF4;
+      color: #3B647A;
+    }
+
+    .flight-strip {
+      background: var(--bg-oat);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 13px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .flight-strip .label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .flight-strip .route {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .timeline {
+      list-style: none;
+      position: relative;
+      padding-left: 22px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: var(--bg-sand);
+    }
+
+    .timeline > li {
+      position: relative;
+      margin-bottom: 16px;
+    }
+
+    .timeline > li:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline > li::before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--bg-card);
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .time-badge {
+      background: var(--bg-oat);
+      color: var(--primary);
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+    }
+
+    .step-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .info-callout {
+      background: var(--bg-page);
+      border-left: 3px solid var(--olive);
+      padding: 9px 14px;
+      border-radius: 0 8px 8px 0;
+      margin-top: 6px;
+      font-size: 13.5px;
+      color: var(--text-main);
+    }
+
+    .link-group {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--bg-page);
+      color: var(--accent);
+      border: 1px solid #E2CFC3;
+      text-decoration: none;
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-link:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .floor-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 14px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .floor-table th {
+      background: var(--bg-oat);
+      color: var(--primary);
+      text-align: left;
+      padding: 9px 14px;
+      font-weight: 700;
+    }
+
+    .floor-table td {
+      padding: 8px 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .floor-table tr.highlight-row td {
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .souvenir-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .souvenir-item {
+      background: var(--bg-page);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .souvenir-item span {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--primary);
+    }
+
+    .wish-card {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FAF7F2 100%);
+      border: 2px solid #DFD3C3;
+    }
+
+    .wish-intro {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .wish-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .wish-row-inputs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .input-author {
+      width: 140px;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 14px;
+      background: #fff;
+      color: var(--text-main);
+    }
+
+    .input-wish {
+      flex: 1;
+      min-width: 240px;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 14.5px;
+      background: #fff;
+      color: var(--text-main);
+    }
+
+    .input-author:focus, .input-wish:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(184, 107, 75, 0.15);
+    }
+
+    .btn-submit {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 14.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn-submit:hover {
+      background: #9E573A;
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .wish-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .wish-entry {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      box-shadow: 0 2px 8px rgba(74, 59, 50, 0.04);
+    }
+
+    .wish-entry-main {
+      flex: 1;
+    }
+
+    .wish-badges {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .cat-badge {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 2px 9px;
+      border-radius: 6px;
+      background: var(--bg-oat);
+      color: var(--primary);
+    }
+
+    .author-tag {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .wish-title {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 3px;
+    }
+
+    .wish-summary {
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+
+    .btn-del {
+      background: transparent;
+      border: none;
+      color: #B0A69E;
+      font-size: 13px;
+      cursor: pointer;
+      padding: 4px 6px;
+      border-radius: 6px;
+    }
+
+    .btn-del:hover {
+      background: #FEE2E2;
+      color: #B91C1C;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 24px;
+      color: var(--text-muted);
+      font-size: 14px;
+      background: var(--bg-page);
+      border-radius: 10px;
+      border: 1px dashed var(--border);
+    }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .quick-nav, .top-bar, .wish-form, .btn-del { display: none; }
+      .card { box-shadow: none; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <div class="sync-badge" id="syncStatus">
+        <span class="sync-dot"></span>
+        <span>雲端即時同步連線中...</span>
+      </div>
+      <button class="btn-print" onclick="window.print()">列印 / 存成 PDF</button>
+    </div>
+
+    <header>
+      <h1>韓國釜山 5 日自由行行程表</h1>
+      <div class="meta-row">
+        <span>📅 12/10 (THUR.) – 12/14 (MON.)</span>
+        <span>✈️ 中華航空 CI188 / CI187</span>
+        <span>🏨 L7海雲台樂天酒店</span>
+      </div>
+    </header>
+
+    <nav class="quick-nav">
+      <a href="#prep">行前準備</a>
+      <a href="#day1">Day 1</a>
+      <a href="#day2">Day 2</a>
+      <a href="#day3">Day 3</a>
+      <a href="#day4">Day 4</a>
+      <a href="#day5">Day 5</a>
+      <a href="#wishlist" class="nav-wish">✨ 旅伴願望清單</a>
+    </nav>
+
+    <!-- 行前準備 -->
+    <section id="prep" class="card">
+      <div class="card-header">
+        <h2 class="day-title">🧳 行前準備與航班資訊</h2>
+      </div>
+
+      <div class="prep-grid">
+        <div class="prep-box">
+          <h3>票證購買：釜山通行證 BIG3</h3>
+          <div><span class="pass-tag pass-purple">紫色：樂天世界</span></div>
+          <div><span class="pass-tag pass-blue">藍色：Arte Museum、松島海上纜車</span></div>
+        </div>
+        <div class="prep-box">
+          <h3>網路與接送</h3>
+          <div class="step-desc" style="color: var(--text-main);">• 手機 ESIM</div>
+          <div class="step-desc" style="color: var(--text-main);">• 訂車台灣接送機</div>
+        </div>
+      </div>
+
+      <div class="flight-strip">
+        <span class="label">🛫 去程航班｜中華航空 CI188</span>
+        <span class="route">07:40 (TPE) 桃園國際機場第一航廈 &gt; 10:50 (PUS) 釜山金海國際機場第一航廈</span>
+      </div>
+    </section>
+
+    <!-- Day 1 -->
+    <section id="day1" class="card">
+      <div class="card-header">
+        <h2 class="day-title"><span class="day-pill">Day 1</span> 12/10 (THUR.)</h2>
+      </div>
+
+      <div class="focus-banner">
+        <span class="focus-label">主要行程</span>
+        <span class="focus-text">釜山 Arte Museum（營業時間 10:00–20:00）</span>
+      </div>
+
+      <ul class="timeline">
+        <li>
+          <div class="step-header">抵達機場後搭計程車前往飯店寄放行李</div>
+        </li>
+        <li>
+          <div class="step-header">午餐：嚴湧帛豬肉湯飯 海雲台店</div>
+          <div class="link-group">
+            <a class="btn-link" href="https://twobunnytravel.tw/eomyongbaek-doejigukbap-haeundae/" target="_blank" rel="noopener">🔗 參考食記</a>
+          </div>
+        </li>
+        <li>
+          <div class="step-header">前往影島參觀「釜山 Arte Museum」</div>
+          <div class="step-desc">從海雲台搭計程車到影島車程約 1 小時</div>
+        </li>
+        <li>
+          <div class="step-header">順遊旁邊的 P.ARK Cafe &amp; Bakery</div>
+          <div class="info-callout">
+            位於釜山影島海岸第一排，是結合咖啡廳、烘焙坊、餐廳、展覽空間、選物商店與文化活動的複合式文化空間，也是近年釜山最具代表性的海景咖啡廳之一。
+          </div>
+          <div class="link-group">
+            <a class="btn-link" href="https://twobunnytravel.tw/park-cafe-bakery/" target="_blank" rel="noopener">🔗 咖啡廳介紹</a>
+          </div>
+        </li>
+        <li>
+          <div class="step-header">結束後依現場狀況逛街或先回飯店休息</div>
+        </li>
+        <li>
+          <div class="step-header"><span class="time-badge">15:00 後</span> Check-in 入住 L7海雲台樂天酒店</div>
+          <div class="info-callout">
+            🏨 <strong>飯店特別設施：</strong>5F 健身房、19F 酒吧 2:00 PM–10:00 PM (Last order: 9:00 PM)
+          </div>
+        </li>
+        <li>
+          <div class="step-header">晚餐：Goban Sikdang 고반식당 해운대점（高飯食堂海雲台店）<span class="time-badge">營業至 23:00</span></div>
+          <div class="link-group">
+            <a class="btn-link" href="https://www.threads.com/share/LSUKLaK7-/" target="_blank" rel="noopener">🔗 Threads 推薦</a>
+            <a class="btn-link" href="https://mega66.tw/goban-sikdang/" target="_blank" rel="noopener">🔗 部落格食記</a>
+          </div>
+        </li>
+        <li>
+          <div class="step-header">散步回飯店休息</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Day 2 -->
+    <section id="day2" class="card">
+      <div class="card-header">
+        <h2 class="day-title"><span class="day-pill">Day 2</span> 12/11 (FRI.)</h2>
+      </div>
+
+      <div class="focus-banner">
+        <span class="focus-label">主要行程</span>
+        <span class="focus-text">釜山樂天世界（營業時間 10:00–19:00）</span>
+      </div>
+
+      <ul class="timeline">
+        <li>
+          <div class="step-header">暢玩釜山樂天世界（使用 BIG3 紫色票證）</div>
+        </li>
+        <li>
+          <div class="step-header"><span class="time-badge">15:00–16:00</span> 離開樂園，前往新世界百貨公司 Centum City 店</div>
+          <table class="floor-table">
+            <thead>
+              <tr>
+                <th>品牌 / 餐廳</th>
+                <th>樓層</th>
+                <th>館別</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>SPAO</td><td>B2</td><td>新館 Mall</td></tr>
+              <tr><td>emis</td><td>B2</td><td>新館 Mall</td></tr>
+              <tr><td>COVERNAT</td><td>B2</td><td>新館 Mall</td></tr>
+              <tr><td>WACKY WiLLY</td><td>B2</td><td>新館 Mall</td></tr>
+              <tr><td>ADER ERROR</td><td>3F</td><td>本館</td></tr>
+              <tr class="highlight-row"><td>晚餐：Shake Shack</td><td>1F</td><td>新館 Mall</td></tr>
+            </tbody>
+          </table>
+        </li>
+        <li>
+          <div class="step-header"><span class="time-badge">約 20:00</span> 離開新世界百貨</div>
+        </li>
+        <li>
+          <div class="step-header">前往補充零食泡麵：海雲台 EMAR <span class="time-badge">營業至 23:00</span></div>
+          <div class="link-group">
+            <a class="btn-link" href="https://tinachiang0824.pixnet.net/blog/posts/9576329068" target="_blank" rel="noopener">🔗 採買攻略</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Day 3 -->
+    <section id="day3" class="card">
+      <div class="card-header">
+        <h2 class="day-title"><span class="day-pill">Day 3</span> 12/12 (SAT.)</h2>
+        <span class="firework-tag">🎆 只有這天廣安里有煙火</span>
+      </div>
+
+      <div class="focus-banner">
+        <span class="focus-label">主要行程</span>
+        <span class="focus-text">19:30 遊艇體驗</span>
+      </div>
+
+      <ul class="timeline">
+        <li>
+          <div class="step-header"><span class="time-badge">早上</span> SEA LIFE 水族館</div>
+        </li>
+        <li>
+          <div class="step-header"><span class="time-badge">下午</span> 廣安里 朝朝刀削麵</div>
+          <div class="link-group">
+            <a class="btn-link" href="https://windko.tw/busan-jojo/" target="_blank" rel="noopener">🔗 參考食記</a>
+          </div>
+        </li>
+        <li>
+          <div class="step-header"><span class="time-badge">夜間 19:30</span> 使用票證：廣安里 海雲台 共乘遊艇</div>
+          <div class="link-group">
+            <a class="btn-link" href="https://www.kkday.com/zh-tw/product/134684-yacht-holic-busan-yacht-public-tour-gwangan-ri-haeundae-south-korea" target="_blank" rel="noopener">🔗 KKday 遊艇資訊</a>
+          </div>
+        </li>
+        <li>
+          <div class="step-header">結束後返回海雲台：逛傳統市場、大創、OLIVE YOUNG</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Day 4 -->
+    <section id="day4" class="card">
+      <div class="card-header">
+        <h2 class="day-title"><span class="day-pill">Day 4</span> 12/13 (SUN.)</h2>
+        <span class="time-badge">09:00～20:00</span>
+      </div>
+
+      <div class="focus-banner">
+        <span class="focus-label">主要行程</span>
+        <span class="focus-text">松島海上纜車</span>
+      </div>
+
+      <ul class="timeline">
+        <li>
+          <div class="step-header">搭乘地鐵「扎嘎其市場站」轉搭 UBER 抵達松島海上纜車</div>
+          <div class="info-callout">
+            🎫 <strong>釜山 PASS（Visit Busan Pass）：</strong>持 PASS 至 1 樓售票櫃檯兌換實體票，可免費搭乘一般或水晶車廂（需先換票再至 4 樓搭乘）。
+          </div>
+        </li>
+        <li>
+          <div class="step-header">松島龍宮雲橋</div>
+        </li>
+        <li>
+          <div class="step-header">松島 Sky Park 頂樓展望台</div>
+        </li>
+        <li>
+          <div class="step-header">最後到 EL16.52 咖啡廳</div>
+          <div class="link-group">
+            <a class="btn-link" href="https://twobunnytravel.tw/el1652-busan/" target="_blank" rel="noopener">🔗 咖啡廳介紹</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Day 5 -->
+    <section id="day5" class="card">
+      <div class="card-header">
+        <h2 class="day-title"><span class="day-pill">Day 5</span> 12/14 (MON.)</h2>
+      </div>
+
+      <div class="focus-banner">
+        <span class="focus-label">主要行程</span>
+        <span class="focus-text">最後的悠閒</span>
+      </div>
+
+      <ul class="timeline">
+        <li>
+          <div class="step-header"><span class="time-badge">上午到下午</span> FREE 行程：睡到自然醒，整理行李，悠哉吃早餐</div>
+        </li>
+        <li>
+          <div class="step-header"><span class="time-badge">11:00</span> 退房（櫃台寄行李）</div>
+        </li>
+        <li>
+          <div class="step-header">海雲台巷弄內美食、咖啡廳、OLIVE YOUNG 補貨</div>
+          <div class="step-desc" style="font-weight: 700; color: var(--primary); margin-top: 8px;">🎁 可買伴手禮清單：</div>
+          <div class="souvenir-row">
+            <div class="souvenir-item">
+              <span>BUSAN BADA SAND</span>
+              <a class="btn-link" href="https://bobbytravel.tw/busan-bada-sand/" target="_blank" rel="noopener">🔗 介紹</a>
+            </div>
+            <div class="souvenir-item">
+              <span>BUSAN DUPLIT</span>
+              <a class="btn-link" href="https://www.instagram.com/p/DRm0h68E6rw/?img_index=7" target="_blank" rel="noopener">🔗 IG 貼文</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="step-header"><span class="time-badge">15:00</span> 準備搭車前往機場（辦理退稅）</div>
+        </li>
+        <li>
+          <div class="step-header">回熟悉的台灣囉~~</div>
+          <div class="flight-strip" style="margin-top: 8px;">
+            <span class="label">🛬 回程航班｜中華航空 CI187</span>
+            <span class="route">19:50 (TPE) 桃園國際機場第一航廈 &gt; 21:30 (PUS) 釜山金海國際機場第一航廈</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 旅伴共編願望清單 -->
+    <section id="wishlist" class="card wish-card">
+      <div class="card-header">
+        <h2 class="day-title">✨ 旅伴共編願望清單</h2>
+      </div>
+      <p class="wish-intro">
+        貼上想去的地方、想吃的美食、必買伴手禮或任何參考網址，系統會自動分類整理並即時同步給所有旅伴！
+      </p>
+
+      <form class="wish-form" id="wishForm">
+        <div class="wish-row-inputs">
+          <input type="text" id="authorInput" class="input-author" placeholder="你的名字（選填）" maxlength="15" />
+          <input type="text" id="wishInput" class="input-wish" placeholder="輸入地點、必買商品或貼上網址..." required />
+          <button type="submit" class="btn-submit" id="submitBtn">新增願望</button>
+        </div>
+      </form>
+
+      <div class="wish-list" id="wishList">
+        <div class="empty-state">載入願望清單中...</div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Firebase SDK (已綁定 busan-trip-ef146) -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+    import {
+      getFirestore,
+      collection,
+      addDoc,
+      deleteDoc,
+      doc,
+      onSnapshot,
+      serverTimestamp
+    } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAl7XXDrWvv_9ebiEZCUwCbHN4BaGycgIk",
+      authDomain: "busan-trip-ef146.firebaseapp.com",
+      projectId: "busan-trip-ef146",
+      storageBucket: "busan-trip-ef146.firebasestorage.app",
+      messagingSenderId: "784672470522",
+      appId: "1:784672470522:web:65382cab3264d86389a043"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const wishesCol = collection(db, "busan_wishes");
+
+    const syncStatus = document.getElementById("syncStatus");
+    const wishForm = document.getElementById("wishForm");
+    const authorInput = document.getElementById("authorInput");
+    const wishInput = document.getElementById("wishInput");
+    const submitBtn = document.getElementById("submitBtn");
+    const wishList = document.getElementById("wishList");
+
+    function analyzeWishInput(rawText) {
+      const urlRegex = /(https?:\/\/[^\s]+)/g;
+      const urls = rawText.match(urlRegex) || [];
+      const url = urls.length > 0 ? urls[0] : "";
+      let cleanText = rawText.replace(urlRegex, "").trim();
+
+      const lower = rawText.toLowerCase();
+      let category = "📌 旅遊靈感";
+      let summary = "旅伴新增的釜山旅遊筆記，點擊連結可查看詳細資訊。";
+
+      if (/吃|飯|麵|肉|咖啡|甜點|餅乾|麵包|宵夜|酒|酒吧|餐廳|食記|烤肉|湯飯|cafe|coffee|bakery|food|restaurant/.test(lower)) {
+        category = "🍴 美食餐廳";
+        summary = "列入釜山美食／咖啡廳口袋名單，可安排進午晚餐或下午茶空檔。";
+      } else if (/買|伴手禮|藥妝|衣服|百貨|商店|超市|紀念品|大創|olive|spao|emis|sand|shop|mall|store/.test(lower)) {
+        category = "🛍️ 購物伴手禮";
+        summary = "列入釜山採買與伴手禮清單，逛街時記得留意此品項。";
+      } else if (/玩|景點|海邊|公園|纜車|博物館|水族館|展望台|拍照|打卡|煙火|遊艇|體驗|kkday|klook|museum|park/.test(lower)) {
+        category = "📍 景點體驗";
+        summary = "列入釜山踩點與體驗行程候選，可依當日順路程度彈性安插。";
+      } else if (/交通|車|地鐵|計程車|uber|退稅|換錢|網卡|esim|飯店|行李/.test(lower)) {
+        category = "💡 實用資訊";
+        summary = "釜山自由行實用攻略與行前／當地注意事項提醒。";
+      }
+
+      if (!cleanText && url) {
+        try {
+          const u = new URL(url);
+          const host = u.hostname.replace("www.", "");
+          if (host.includes("instagram.com")) {
+            cleanText = "Instagram 推薦貼文 / 打卡點";
+          } else if (host.includes("threads.com") || host.includes("threads.net")) {
+            cleanText = "Threads 脆友推薦情報";
+          } else if (host.includes("kkday.com") || host.includes("klook.com")) {
+            cleanText = "票券 / 行程體驗頁面";
+          } else if (host.includes("naver.com") || host.includes("google.com")) {
+            cleanText = "地圖位置資訊";
+          } else {
+            cleanText = `參考網頁 (${host})`;
+          }
+        } catch (e) {
+          cleanText = "參考連結";
+        }
+      }
+
+      return {
+        title: cleanText || "未命名願望",
+        category,
+        summary,
+        url
+      };
+    }
+
+    const savedAuthor = localStorage.getItem("busan_wish_author");
+    if (savedAuthor) authorInput.value = savedAuthor;
+
+    onSnapshot(
+      wishesCol,
+      (snapshot) => {
+        syncStatus.innerHTML = `<span class="sync-dot"></span><span>雲端即時同步已連線</span>`;
+        const items = [];
+        snapshot.forEach((docSnap) => {
+          items.push({ id: docSnap.id, ...docSnap.data() });
+        });
+
+        items.sort((a, b) => {
+          const tA = a.createdAt?.toMillis ? a.createdAt.toMillis() : 0;
+          const tB = b.createdAt?.toMillis ? b.createdAt.toMillis() : 0;
+          return tB - tA;
+        });
+
+        renderWishes(items);
+      },
+      (error) => {
+        console.error("Firestore error:", error);
+        syncStatus.innerHTML = `<span class="sync-dot" style="background:#DC2626;"></span><span>連線異常（請確認 Firestore 規則權限）</span>`;
+        wishList.innerHTML = `<div class="empty-state">無法讀取雲端資料：${error.message}</div>`;
+      }
+    );
+
+    function escapeHtml(str) {
+      const div = document.createElement("div");
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    function renderWishes(items) {
+      if (items.length === 0) {
+        wishList.innerHTML = `<div class="empty-state">目前還沒有新增任何願望，快在上方輸入第一個想去的地方或想買的東西吧！</div>`;
+        return;
+      }
+
+      wishList.innerHTML = items
+        .map((item) => {
+          const authorText = item.author ? `由 ${escapeHtml(item.author)} 新增` : "旅伴新增";
+          const linkHtml = item.url
+            ? `<div class="link-group"><a class="btn-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">🔗 開啟參考網址</a></div>`
+            : "";
+
+          return `
+            <div class="wish-entry">
+              <div class="wish-entry-main">
+                <div class="wish-badges">
+                  <span class="cat-badge">${escapeHtml(item.category || "📌 旅遊靈感")}</span>
+                  <span class="author-tag">${authorText}</span>
+                </div>
+                <div class="wish-title">${escapeHtml(item.title)}</div>
+                <div class="wish-summary">${escapeHtml(item.summary || "")}</div>
+                ${linkHtml}
+              </div>
+              <button class="btn-del" data-id="${item.id}" title="刪除此項目">✕</button>
+            </div>
+          `;
+        })
+        .join("");
+
+      document.querySelectorAll(".btn-del").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          const id = btn.getAttribute("data-id");
+          if (confirm("確定要刪除這筆願望嗎？")) {
+            await deleteDoc(doc(db, "busan_wishes", id));
+          }
+        });
+      });
+    }
+
+    wishForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const raw = wishInput.value.trim();
+      if (!raw) return;
+
+      const author = authorInput.value.trim();
+      if (author) localStorage.setItem("busan_wish_author", author);
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "分析並儲存中...";
+
+      try {
+        const analyzed = analyzeWishInput(raw);
+        await addDoc(wishesCol, {
+          author: author || "旅伴",
+          title: analyzed.title,
+          category: analyzed.category,
+          summary: analyzed.summary,
+          url: analyzed.url,
+          createdAt: serverTimestamp()
+        });
+        wishInput.value = "";
+      } catch (err) {
+        alert("新增失敗，請確認 Firebase Firestore 安全性規則是否已開啟讀寫權限：\n" + err.message);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "新增願望";
+      }
+    });
+  </script>
+</body>
+</html>
